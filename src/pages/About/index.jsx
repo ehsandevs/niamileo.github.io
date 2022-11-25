@@ -1,10 +1,11 @@
-import React from "react";
+// ** Components
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
+import Particle from "../../components/Particle";
+import laptopImg from "../../Assets/about.png";
+// ** Partials
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 
 function About() {

@@ -3,6 +3,7 @@ import Particles from "react-tsparticles";
 
 function Particle() {
   return (
+    // @ts-ignore
     <Particles
       id="tsparticles"
       params={{
