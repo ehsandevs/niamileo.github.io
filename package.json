@@ -29,7 +29,7 @@
     "build": "rimraf ./build && react-scripts build",
     "eject": "react-scripts eject",
     "test": "react-scripts test --watchAll=false",
-    "predeploy": "npm run build && react-snap",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint $(git ls-files '*.js')",
     "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js"
