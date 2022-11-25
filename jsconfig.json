@@ -1,0 +1,11 @@
+{
+  "include": ["src"],
+  "exclude": [".git", "node_modules", "build"],
+  "compilerOptions": {
+    "checkJs": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "typeRoots": ["src/types"],
+    "resolveJsonModule": true
+  }
+}
