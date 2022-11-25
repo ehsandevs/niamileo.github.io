@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDencrypt } from "use-dencrypt-effect";
 
 const decryptOptions = {
@@ -67,18 +67,23 @@ const decryptOptions = {
 export const TextDecrypt = ({ text, style = {} }) => {
   const { result, dencrypt } = useDencrypt(decryptOptions);
 
+  const [fontFamily, setFontFamily] = useState("Kryptonian");
+
   useEffect(() => {
     const updateText = () => {
       dencrypt(text || "");
     };
 
     const action = setTimeout(updateText, 0);
+    setTimeout(() => {
+      setFontFamily('"Raleway", serif');
+    }, 3000);
 
     return () => clearTimeout(action);
   }, [dencrypt, text]);
 
   return (
-    <p style={style}>
+    <p style={{ fontFamily, ...style }}>
       {result}
       {" "}
     </p>
