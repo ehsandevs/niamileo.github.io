@@ -1,7 +1,7 @@
 export default {
   instagram: {
     link: "ehsandevs",
-    visible: true,
+    visible: false,
   },
   linkedin: {
     link: "amir-ehsan-haji-hussaini-4843b4112",
