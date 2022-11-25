@@ -26,9 +26,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "rimraf ./build && react-scripts build",
+    "eject": "react-scripts eject",
+    "test": "react-scripts test --watchAll=false",
+    "predeploy": "npm run build && react-snap",
+    "deploy": "gh-pages -d build",
+    "lint": "eslint $(git ls-files '*.js')",
+    "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js"
   },
   "eslintConfig": {
     "extends": [
