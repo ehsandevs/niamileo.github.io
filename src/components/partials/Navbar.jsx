@@ -37,7 +37,7 @@ function NavBar() {
               fontWeight: "bolder",
             }}
           >
-            Woman Life Freedom
+            Woman, Life, Freedom
           </h2>
         </Navbar.Brand>
         <Navbar.Toggle
