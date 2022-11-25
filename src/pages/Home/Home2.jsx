@@ -3,6 +3,7 @@ import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import { AiFillGithub, AiOutlineTwitter, AiFillInstagram } from "react-icons/ai"; //prettier-ignore
 import { FaLinkedinIn } from "react-icons/fa";
+import social from "src/configs/social";
 
 function Home2() {
   return (
@@ -19,7 +20,12 @@ function Home2() {
               <br />
               <br />I am fluent in classics like
               <i>
-                <b className="purple"> C++, Javascript and Python. </b>
+                <b className="purple"> Javascript. </b>
+              </i>
+              <br />
+              And a little bit of
+              <i>
+                <b className="purple"> PHP frameworks like Laravel. </b>
               </i>
               <br />
               <br />
@@ -60,46 +66,57 @@ function Home2() {
               Feel free to <span className="purple">connect </span>with me
             </p>
             <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/Soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
+              {social.github.visible && (
+                <li className="social-icons">
+                  <a
+                    href={`https://github.com/${social.github.link}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour  home-social-icons"
+                  >
+                    <AiFillGithub />
+                  </a>
+                </li>
+              )}
+
+              {social.twitter.visible && (
+                <li className="social-icons">
+                  <a
+                    href={`https://twitter.com/${social.twitter.link}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour  home-social-icons"
+                  >
+                    <AiOutlineTwitter />
+                  </a>
+                </li>
+              )}
+
+              {social.linkedin.visible && (
+                <li className="social-icons">
+                  <a
+                    href={`https://www.linkedin.com/in/${social.linkedin.link}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour  home-social-icons"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </li>
+              )}
+
+              {social.instagram.visible && (
+                <li className="social-icons">
+                  <a
+                    href={`https://www.instagram.com/${social.instagram.link}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour home-social-icons"
+                  >
+                    <AiFillInstagram />
+                  </a>
+                </li>
+              )}
             </ul>
           </Col>
         </Row>

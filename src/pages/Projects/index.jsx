@@ -12,7 +12,7 @@ import bitsOfCode from "../../Assets/Projects/blog.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
+      {/* <Particle />
       <Container>
         <h1 className="project-heading">
           My Recent <strong className="purple">Works </strong>
@@ -88,7 +88,7 @@ function Projects() {
             />
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </Container>
   );
 }
